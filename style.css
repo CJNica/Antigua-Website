@@ -655,7 +655,7 @@ body {
   width: 80%;
   max-width: 768px;
   margin-top: 10rem;
-  left: 10%;
+  left: 0%;
   overflow: hidden; /* Hide overflow outside the box */
   border: 2px solid #ddd; /* Add a border around the box container */
   border-radius: 8px; /* Optional: rounded corners for the box */
