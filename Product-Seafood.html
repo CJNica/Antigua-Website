@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Antigua - Products</title>
+  <link rel="stylesheet" href="Style_productsea.css">
+  <link rel="stylesheet" href="allstyle.css">
+  <link rel="stylesheet" href="style_p.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <header class="header">
+      <div class="header-content">
+          <div class="header-item">
+              <i class="location-icon">📍</i>
+              <span>Profugo St. Lucena City</span>
+          </div>
+          <div class="header-item">
+              <i class="clock-icon">⏰</i>
+              <span>Daily: 9:00 am - 10:00 pm</span>
+          </div>
+          <div class="header-item">
+              <i class="phone-icon">📞</i>
+              <span>(042) 710 3531</span>
+          </div>
+          <div class="header-item">
+              <i class="email-icon">✉️</i>
+              <span>antiguarestaurantlucena@gmail.com</span>
+          </div>
+      </div>
+  </header>
+</body>
+
+<body>
+
+  <!-- Banner Section -->
+  <div class="banner">
+    <div class="navbar">
+      <div class="burger-icon" onclick="toggleMenu()">
+        &#9776; <!-- Burger menu icon -->
+      </div>
+      <img src="images/antigua_logo.png" class="logo">
+      
+      <!-- Sidebar -->
+      <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeMenu()">×</a>
+        <a href="Pelec.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="blogs.html">Blogs</a>
+        <a href="products.html">Products</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
+      <ul>
+        <li><a href="Pelec.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="blogs.html">Blogs</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="contact.html">Contact</a></li>
+       
+      </ul>
+      <a href="login.html" class="signin-btn">Sign In</a>
+    </div>
+  </div>
+
+  <!-- Slideshow and other content here -->
+
+  <script>
+    // JavaScript to toggle the sidebar menu
+    function toggleMenu() {
+      var sidebar = document.getElementById("mySidebar");
+      sidebar.classList.toggle("active");
+    }
+
+    // Close the sidebar when clicking outside
+    function closeMenu() {
+      var sidebar = document.getElementById("mySidebar");
+      sidebar.classList.remove("active");
+    }
+  </script>
+
+</body>
+
+
+</div>
+<section class="products" style=" margin-top: 5rem;">
+  <div>
+    <img style="width: 250px;align-items: center;" src="images/CAFE ANTIGUA.png" class="logo2">
+    <form class="search-form" action="#" method="get">
+      <input class="search-input" type="text" placeholder="Search for food..."  name="search">
+  </form>
+    <nav class="navbarprod">
+      <ul>
+        <li><a href="products.html">Specialties</a></li>
+        <li><a href="chicken.html">Chicken</a></li>
+        <li><a href="Product-Pork.html">Pork</a></li>
+        <li><a href="Product-Beef.html">Beef</a></li>
+        <li><a href="Product-Seafood.html">Seafoods</a></li>
+        <li><a href="Product-Vegetables.html">Vegetables</a></li>
+        <li><a href="Product-Softdrinks.html">Drinks</a></li>
+        <li><a href="Product-Desert.html">Desert</a></li>
+
+      </ul>
+    </nav>
+  </div>
+  <div class="dropdown">
+    <button onclick="myFunction()" class="dropbtn">Seafoods</button>
+    <div id="myDropdown" class="dropdown-content">
+      <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
+      <a href="products.html">Specialties</a>
+      <a href="Product-Pork.html">Pork</a>
+      <a href="chicken.html">Chicken</a>
+      <a href="Product-Beef.html">Beef</a>
+      <a href="Product-Vegetables.html">Vegetables</a>
+      <a href="Product-Softdrinks.html">Drinks</a>
+      <a href="Product-Desert.html">Desserts</a>
+    </div>
+  </div>
+  <script>
+    function myFunction() {
+      document.getElementById("myDropdown").classList.toggle("show");
+    }
+
+    function filterFunction() {
+      const input = document.getElementById("myInput");
+      const filter = input.value.toUpperCase();
+      const div = document.getElementById("myDropdown");
+      const a = div.getElementsByTagName("a");
+      for (let i = 0; i < a.length; i++) {
+        const txtValue = a[i].textContent || a[i].innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          a[i].style.display = "";
+        } else {
+          a[i].style.display = "none";
+        }
+      }
+    }
+  </script>
+</div>
+
+    
+        
+    <div id="Seafoods" class="products-container">
+      
+      <h2 class="ourmenu">Our Menu</h2>
+
+     
+      <!-- Calamares Product -->
+      <div class="product-calamares">
+        <img src="images/Calamares.jpg" alt="Fried Calamares">
+        <div class="product-info-calamares">
+          <h2>FRIED CALAMARES</h2>
+          <p>Crispy battered squid rings deep-fried until golden</p>
+          <p class="price-calamares">240</p>
+      
+        </div>
+      </div>
+
+      <!-- Sauted Shrimp Product -->
+      <div class="product-sauted">
+        <img src="images/Sauted shrimp.jpg" alt="Fried Sauted Shrimp">
+        <div class="product-info-sauted">
+          <h2>FRIED SAUTED SHRIMP</h2>
+          <p>Pan-fried shrimp with garlic and seasoning</p>
+          <p class="price-sauted">250</p>
+
+        </div>
+      </div>
+
+      <!-- Fried Shrimp Product -->
+      <div class="product-friedshrimp">
+        <img src="images/Fried shimp.jpg" alt="Fried Shrimp">
+        <div class="product-info-friedshrimp">
+          <h2>FRIED SHRIMP</h2>
+          <p>Breaded shrimp deep-fried to perfection</p>
+          <p class="price-friedshrimp">210 - 350</p>
+          
+        </div>
+      </div>
+
+      <!--Shrimp curry Product-->
+      <div class="product-shrimpcurry">
+        <img src="images/Shrimp curry.jpg" alt="Shrimp Curry">
+        <div class="product-info-shrimpcurry">
+          <h2>SHRIMP CURRY</h2>
+          <p>Spicy shrimp cooked in creamy coconut curry sauce</p>
+          <p class="price-shrimpcurry">190 - 320</p>
+          
+        </div>
+      </div>
+
+      <!-- Salted egg shrimp Product -->
+      <div class="product-salted">
+        <img src="images/salted shimp.jpg" alt="Salted Egg Shrimp">
+        <div class="product-info-salted">
+          <h2>SALTED EGG SHRIMP</h2>
+          <p>Shrimp tossed in rich salted egg sauce</p>
+          <p class="price-salted">225 - 370</p>
+
+        </div>
+      </div>
+
+      <!--Shrimp Product-->
+      <div class="product-shrimp">
+        <img src="images/Shimp.jpg" alt="Shrimp">
+        <div class="product-info-shrimp">
+          <h2>SHRIMP</h2>
+          <p>Stir-fried shrimp with special sauce</p>
+          <p class="price-shrimp">150 - 270</p>
+
+        </div>
+      </div>
+
+      <!--Fish fillet Product-->
+      <div class="product-fillet">
+        <img src="images/Fish fillet.jpg" alt="Fish Fillet">
+        <div class="product-info-fillet">
+          <h2>FISH FILLET</h2>
+          <p>Tender fish cut grilled or fried</p>
+          <p class="price-fillet">210 - 400</p>
+
+        </div>
+      </div>
+
+      <!-- Sinigang na bangus Product -->
+      <div class="product-bangus">
+        <img src="images/Sinigang.jpg" alt="Sinigang na Bangus">
+        <div class="product-info-bangus">
+          <h2>SINIGANG NA BANGUS</h2>
+          <p>Sour soup with milkfish and vegetables</p>
+          <p class="price-bangus">180 - 260</p>
+
+        </div>
+      </div>
+
+      <!--Tilapia curry Product-->
+      <div class="product-tilapia">
+        <img src="images/Tilapia Curry.jpg" alt="Tilapia Curry">
+        <div class="product-info-tilapia">
+          <h2>TILAPIA CURRY</h2>
+          <p>Tilapia fish cooked in fragrant curry sauce</p>
+          <p class="price-tilapia">150 - 300</p>
+  
+        </div>
+      </div>
+      
+  </section>
+
+</body>
+
+
+</html>

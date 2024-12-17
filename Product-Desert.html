@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Antigua - Products</title>
+  <link rel="stylesheet" href="allstyle.css">
+  <link rel="stylesheet" href="Style_productdesert.css">
+  <link rel="stylesheet" href="style_p.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <header class="header">
+      <div class="header-content">
+          <div class="header-item">
+              <i class="location-icon">📍</i>
+              <span>Profugo St. Lucena City</span>
+          </div>
+          <div class="header-item">
+              <i class="clock-icon">⏰</i>
+              <span>Daily: 9:00 am - 10:00 pm</span>
+          </div>
+          <div class="header-item">
+              <i class="phone-icon">📞</i>
+              <span>(042) 710 3531</span>
+          </div>
+          <div class="header-item">
+              <i class="email-icon">✉️</i>
+              <span>antiguarestaurantlucena@gmail.com</span>
+          </div>
+      </div>
+  </header>
+</body>
+
+<body>
+
+  <!-- Banner Section -->
+  <div class="banner">
+    <div class="navbar">
+      <div class="burger-icon" onclick="toggleMenu()">
+        &#9776; <!-- Burger menu icon -->
+      </div>
+      <img src="images/antigua_logo.png" class="logo">
+      
+      <!-- Sidebar -->
+      <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeMenu()">×</a>
+        <a href="Pelec.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="blogs.html">Blogs</a>
+        <a href="products.html">Products</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
+      <ul>
+        <li><a href="Pelec.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="blogs.html">Blogs</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="contact.html">Contact</a></li>
+       
+      </ul>
+      <a href="login.html" class="signin-btn">Sign In</a>
+    </div>
+  </div>
+
+  <!-- Slideshow and other content here -->
+
+  <script>
+    // JavaScript to toggle the sidebar menu
+    function toggleMenu() {
+      var sidebar = document.getElementById("mySidebar");
+      sidebar.classList.toggle("active");
+    }
+
+    // Close the sidebar when clicking outside
+    function closeMenu() {
+      var sidebar = document.getElementById("mySidebar");
+      sidebar.classList.remove("active");
+    }
+  </script>
+
+</body>
+</div>
+<section class="products" style=" margin-top: 5rem;">
+  <div>
+    <img style="width: 250px;align-items: center;" src="images/CAFE ANTIGUA.png" class="logo2">
+    <form class="search-form" action="#" method="get">
+      <input class="search-input" type="text" placeholder="Search for food..."  name="search">
+  </form>
+    <nav class="navbarprod">
+      <ul>
+        <li><a href="products.html">Specialties</a></li>
+        <li><a href="chicken.html">Chicken</a></li>
+        <li><a href="Product-Pork.html">Pork</a></li>
+        <li><a href="Product-Beef.html">Beef</a></li>
+        <li><a href="Product-Seafood.html">Seafoods</a></li>
+        <li><a href="Product-Vegetables.html">Vegetables</a></li>
+        <li><a href="Product-Softdrinks.html">Drinks</a></li>
+        <li><a href="Product-Desert.html">Desert</a></li>
+
+      </ul>
+    </nav>
+  </div>
+  <div class="dropdown">
+    <button onclick="myFunction()" class="dropbtn">Desserts</button>
+    <div id="myDropdown" class="dropdown-content">
+      <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
+      <a href="products.html">Specialties</a>
+      <a href="Product-Pork.html">Pork</a>
+      <a href="chicken.html">Chicken</a>
+      <a href="Product-Seafood.html">Seafoods</a>
+      <a href="Product-Vegetables.html">Vegetables</a>
+      <a href="Product-Softdrinks.html">Drinks</a>
+      <a href="Product-Beef.html">Beef</a>
+    </div>
+  </div>
+  <script>
+    function myFunction() {
+      document.getElementById("myDropdown").classList.toggle("show");
+    }
+
+    function filterFunction() {
+      const input = document.getElementById("myInput");
+      const filter = input.value.toUpperCase();
+      const div = document.getElementById("myDropdown");
+      const a = div.getElementsByTagName("a");
+      for (let i = 0; i < a.length; i++) {
+        const txtValue = a[i].textContent || a[i].innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          a[i].style.display = "";
+        } else {
+          a[i].style.display = "none";
+        }
+      }
+    }
+  </script>
+</div>
+
+    
+        
+    <div id="Desert" class="products-container">
+      
+      <h2 class="ourmenu">Our Menu</h2>
+
+
+      <!-- Halo-Halo Product -->
+      <div class="product-halo">
+        <img src="images/Halo halo.jpg" alt="Halo-Halo">
+        <div class="product-info-halo">
+          <h2>HALO-HALO</h2>
+          <p>Layered dessert with mixed fruits, shaved ice, and milk</p>
+          <p class="price-halo">100 - 150</p>
+  
+        </div>
+      </div>
+
+      <!-- Leche Flan Product -->
+      <div class="product-flan">
+        <img src="images/Leche Flan.jpg" alt="Leche Flan">
+        <div class="product-info-flan">
+          <h2>LECHE FLAN</h2>
+          <p>Creamy caramel custard dessert, rich and smooth</p>
+          <p class="price-flan">60</p>
+  
+        </div>
+      </div>
+
+      <!-- Mais con hielo Product -->
+      <div class="product-mais">
+        <img src="images/Mais con yelo.jpg" alt="Mais Con Hielo">
+        <div class="product-info-mais">
+          <h2>MAIS CON HIELO</h2>
+          <p> Sweet corn with shaved ice and milk</p>
+          <p class="price-mais">100</p>
+  
+        </div>
+      </div>
+
+      <!--Fruit salad Product-->
+      <div class="product-fruit">
+        <img src="images/Fruit salad.jpg" alt="Fruit Salad">
+        <div class="product-info-fruit">
+          <h2>FRUIT SALAD</h2>
+          <p>Mixed fresh fruits tossed with cream or dressing</p>
+          <p class="price-fruit">60</p>
+    
+        </div>
+      </div>
+
+      <!-- Macaroni salad Product -->
+      <div class="product-macaroni">
+        <img src="images/Macaroni salad.jpg" alt="Macaroni Salad">
+        <div class="product-info-macaroni">
+          <h2>MACARONI SALAD</h2>
+          <p>Creamy pasta salad with vegetables and dressing</p>
+          <p class="price-macaroni">60</p>
+          
+        </div>
+      </div>
+
+      <!--Mango Sago Product-->
+      <div class="product-sago">
+        <img src="images/Mango sago.jpg" alt="Mango Sago">
+        <div class="product-info-sago">
+          <h2>MANGO SAGO</h2>
+          <p>Refreshing dessert with mango, sago, and coconut milk</p>
+          <p class="price-sago">75</p>
+  
+        </div>
+      </div>
+
+      <!--Potato salad Product-->
+      <div class="product-potato">
+        <img src="images/Potato salad.jpg" alt="Potato Salad">
+        <div class="product-info-potato">
+          <h2>POTATO SALAD</h2>
+          <p>Creamy salad made with diced potatoes and dressing</p>
+          <p class="price-potato">60</p>
+      
+        </div>
+      </div>
+
+      <!-- Broken Glass Product -->
+      <div class="product-broken">
+        <img src="images/Broken glass.jpg" alt="Broken Glass">
+        <div class="product-info-broken">
+          <h2>BROKEN GLASS</h2>
+          <p>Colorful gelatin dessert with creamy base</p>
+          <p class="price-broken">60</p>
+      
+        </div>
+      </div>
+
+      <!--Baguio fresh Product-->
+      <div class="product-fresh">
+        <img src="images/Baguio fresh.jpg" alt="Baguio Fresh">
+        <div class="product-info-fresh">
+          <h2>BAGUIO FRESH</h2>
+          <p>Fresh produce from Baguio, known for quality and flavor</p>
+          <p class="price-fresh">140</p>
+    
+        </div>
+      </div>
+      
+  </section>
+
+</body>
+
+
+</html>

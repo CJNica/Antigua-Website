@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Antigua</title>
+    <link rel="stylesheet" href="contact_css.css">
+    <link rel="stylesheet" href="allstyle.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div class="header-item">
+                <i class="location-icon">📍</i>
+                <span>Profugo St. Lucena City</span>
+            </div>
+            <div class="header-item">
+                <i class="clock-icon">⏰</i>
+                <span>Daily: 9:00 am - 10:00 pm</span>
+            </div>
+            <div class="header-item">
+                <i class="phone-icon">📞</i>
+                <span>(042) 710 3531</span>
+            </div>
+            <div class="header-item">
+                <i class="email-icon">✉️</i>
+                <span>antiguarestaurantlucena@gmail.com</span>
+            </div>
+        </div>
+    </header>
+</body>
+<body>
+    <header>
+        <div class="banner">
+            <div class="navbar">
+              <div class="burger-icon" onclick="toggleMenu()">
+                &#9776; <!-- Burger menu icon -->
+              </div>
+              <img src="images/antigua_logo.png" class="logo">
+              
+              <!-- Sidebar -->
+              <div id="mySidebar" class="sidebar">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeMenu()">×</a>
+                <a href="Pelec.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="blogs.html">Blogs</a>
+                <a href="products.html">Products</a>
+                <a href="contact.html">Contact</a>
+              </div>
+      
+              <ul>
+                <li><a href="Pelec.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="blogs.html">Blogs</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="contact.html">Contact</a></li>
+               
+              </ul>
+              <a href="login.html" class="signin-btn">Sign In</a>
+            </div>
+          </div>
+      
+          <!-- Slideshow and other content here -->
+      
+          <script>
+            // JavaScript to toggle the sidebar menu
+            function toggleMenu() {
+              var sidebar = document.getElementById("mySidebar");
+              sidebar.classList.toggle("active");
+            }
+      
+            // Close the sidebar when clicking outside
+            function closeMenu() {
+              var sidebar = document.getElementById("mySidebar");
+              sidebar.classList.remove("active");
+            }
+          </script>
+    </header>
+    <main>
+        <div class="contact-location-container">
+            <section class="contact-us-section">
+                <div class="contact-form">
+                    <h2>Contact Us</h2>
+                    <form>
+                        <input type="text" placeholder="First Name" required>
+                        <input type="text" placeholder="Last Name" required>
+                        <input type="tel" placeholder="Phone" required>
+                        <textarea rows="4" placeholder="Message" required></textarea>
+                        <button type="submit">Send</button>
+                    </form>
+                </div>
+            </section>
+            <section class="location-section">
+                <div class="map-container">
+                    <h2>Location</h2>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3875.3805766290046!2d121.62234351535892!3d13.94075839001425!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33bdbb34903faea1%3A0x4a9602c526a6ac4a!2sCafe%20Antigua!5e0!3m2!1sen!2sph!4v1688275362512!5m2!1sen!2sph"></iframe>
+                    <div class="contact-details">
+                        <p>📍 Profugo St, Lucena City</p>
+                        <p>📞 (042) 710 3531</p>
+                        <p>📧 <a href="mailto:antiguarestaurant@gmail.com">antiguarestaurant@gmail.com</a></p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-top">
+            WJP7+277, Profugo Street, Lucena, 4301 Quezon, Philippines P: (042) 710 3531
+        </div>
+        <div class="footer-middle">
+            ©2024 Cafe Antigua | <a href="#">Private Policy</a> | <a href="#">Accessibility Statement</a>
+        </div>
+        <div class="footer-bottom">
+            © 2024 | Design and Develop by Peixu | All Rights Reserved
+        </div>
+    </footer>
+</body>
+</html>

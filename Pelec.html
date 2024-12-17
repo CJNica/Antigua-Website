@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Antigua</title>
+  <link rel="stylesheet" href="style.css">
+  <body>
+    <header class="header">
+        <div class="header-content">
+            <div class="header-item">
+                <i class="location-icon">📍</i>
+                <span>Profugo St. Lucena City</span>
+            </div>
+            <div class="header-item">
+                <i class="clock-icon">⏰</i>
+                <span>Daily: 9:00 am - 10:00 pm</span>
+            </div>
+            <div class="header-item">
+                <i class="phone-icon">📞</i>
+                <span>(042) 710 3531</span>
+            </div>
+            <div class="header-item">
+                <i class="email-icon">✉️</i>
+                <span>antiguarestaurantlucena@gmail.com</span>
+            </div>
+        </div>
+    </header>
+</body>
+  
+  <div class="banner">
+    <div class="navbar">
+      <div class="burger-icon" onclick="toggleMenu()">
+        &#9776; <!-- Burger menu icon -->
+      </div>
+      <img src="images/antigua_logo.png" class="logo">
+      
+      <!-- Sidebar -->
+      <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeMenu()">×</a>
+        <a href="Pelec.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="blogs.html">Blogs</a>
+        <a href="products.html">Products</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
+      <ul>
+        <li><a href="Pelec.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="blogs.html">Blogs</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="contact.html">Contact</a></li>
+       
+      </ul>
+      <a href="login.html" class="signin-btn">Sign In</a>
+    </div>
+  </div>
+
+  <!-- Slideshow and other content here -->
+
+  <script>
+    // JavaScript to toggle the sidebar menu
+    function toggleMenu() {
+      var sidebar = document.getElementById("mySidebar");
+      sidebar.classList.toggle("active");
+    }
+
+    // Close the sidebar when clicking outside
+    function closeMenu() {
+      var sidebar = document.getElementById("mySidebar");
+      sidebar.classList.remove("active");
+    }
+  </script>
+
+
+
+
+
+    <!-- Static Image Containers (Visible on larger screens) -->
+  <div class="image-container">
+    <img src="images/pancit_chami.jpg" alt="Pancit Chami" class="circle-img pancit_chami" onclick="document.location='products.html'">
+  </div>
+  <div class="image-container2">
+    <img src="images/oysterchicken.png" alt="Fried Chicken" class="circle-img fried_chicken" onclick="document.location='chicken.html'">
+    <img src="images/Calamares.jpg" alt="Siopao" class="circle-img siopao" onclick="document.location='Product-Seafood.html'">
+  </div>
+
+  <!-- Slideshow Section (Visible only on screens <= 768px) -->
+  <div class="slideshow-container">
+    <div class="slideshow-box">
+      <div class="slide active">
+        <img src="images/pancit_chami.jpg" style="width: 100%; height: 100%;" alt="Pancit Chami">
+      </div>
+      <div class="slide">
+        <img src="images/leche.png" style="width: 100%; height: 100%;"alt="Leche Flan">
+      </div>
+      <div class="slide">
+        <img src="images/Ox Tongue.jpg" style="width: 100%; height: 100%;"alt="Ox Tongue">
+      </div>
+    </div>
+  </div>
+
+  <!-- Hero Section with Text -->
+  <div class="hero-text">
+    <h1>Bringing you fresh flavors from farm to table</h1>
+    <p>Where good food and great moments meet</p>
+    <div class="hero-buttons">
+      <a href="#Book a Table" class="btn primary" onclick="document.location='login.html'">Book a table</a>
+      <a href="#View our menu" class="btn secondary" onclick="document.location='products.html'">View our menu</a>
+    </div>
+  </div>
+
+  <!-- JavaScript for Slideshow Functionality -->
+  <script>
+    let currentSlide = 0;
+
+    function showSlide(index) {
+      const slides = document.querySelectorAll('.slide');
+      if (index >= slides.length) currentSlide = 0;
+      if (index < 0) currentSlide = slides.length - 1;
+
+      slides.forEach((slide, i) => {
+        slide.classList.remove('active');
+        if (i === currentSlide) {
+          slide.classList.add('active');
+        }
+      });
+    }
+
+    function nextSlide() {
+      currentSlide++;
+      showSlide(currentSlide);
+    }
+
+    function prevSlide() {
+      currentSlide--;
+      showSlide(currentSlide);
+    }
+
+    // Automatically change slides every 5 seconds
+    setInterval(nextSlide, 5000);
+
+    // Initialize the first slide
+    showSlide(currentSlide);
+  </script>
+      <img style="width: 100%;bottom: 100 px;" src="images/briwn.png">
+  
+  </div>
+   
+  
+</body>
+</head>
+</html>

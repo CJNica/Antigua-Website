@@ -1,0 +1,559 @@
+    body {
+        font-family: 'Roboto', sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-image: url("images/background.jpg");
+    }
+    /* Sign In Button Styling */
+    .signin-btn {
+        background-color: rgb(161, 99, 33); /* Gold color for the button */
+        color: white;
+        font-size: 16px;
+        font-weight: bold;
+        padding: 10px 20px;
+        border-radius: 4px;
+        text-decoration: none;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+        display: inline-block; /* Ensures it behaves like a block but on the same line */
+    }
+    
+    .signin-btn:hover {
+        display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 30px;
+    gap: 10px;
+
+    position: absolute;
+    width: 185px;
+    height: 62px;
+    left: 0px;
+    top: 0px;
+        transform: scale(1.05); /* Slightly increases size on hover */
+    }
+    .form-container {
+        background-image: url("images/background.jpg");
+        border-radius: 8px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+        overflow: auto;
+        max-width: 800px;
+        width: 800px;
+        padding: 20px;
+        height: 700px;
+        box-sizing: border-box;
+        text-align: center;
+        animation: slideIn 0.8s ease-in-out, borderLight 2s infinite alternate;
+    }
+    .form-container p{
+        color: #ffffff;
+        text-align: left;
+        font-size: 20px;
+        
+    }
+    .form-container label{
+        color: #ffffff;
+    }
+    .login-form p {
+        color: #ffffff;
+        margin-top: 12px;
+        font-size: 16px;
+    }
+
+    @keyframes slideIn {
+        from {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes borderLight {
+        from {
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+        }
+        to {
+            box-shadow: 0 0 20px rgba(220, 152, 15, 0.856);
+        }
+    }
+
+    .form-container h2 {
+        color: #ecf0f1;
+        margin-bottom: 20px;
+    }
+
+    .login-form input, .signup-form input {
+        width: 500px;
+        padding: 12px;
+        margin: 8px 0;
+        box-sizing: border-box;
+        border: none;
+        border-radius: 4px;
+        outline: none;
+    }
+
+    button[type = "Login"] {
+        background: #db901e;
+        color: #ffffff;
+        font-weight: 250px;
+        border: none;
+        width: 250px;
+        padding: 12px 20px;
+        cursor: pointer;
+        border-radius: 10px;
+        font-size: 16px;
+        border: 2px solid transparent;
+        transition: 0.3s ease;
+    }
+    button[type = "fb1"] {
+        background: #3d5799;
+        color: #ffffff;
+        font-weight: 250px;
+        border: none;
+        width: 250px;
+        height: 40px;
+        padding: 12px 20px;
+        cursor: pointer;
+        border-radius: 10px;
+        font-size: 16px;
+        border: 2px solid transparent;
+        transition: 0.3s ease;
+    }
+    button[type = "g"] {
+        background: #ffffff;
+        color: #000000;
+        font-weight: 250px;
+        border: none;
+        width: 250px;
+        padding: 12px 20px;
+        cursor: pointer;
+        border-radius: 10px;
+        font-size: 16px;
+        border: 2px solid transparent;
+        transition: 0.3s ease;
+    }
+    button[type = "a"] {
+        background: #ffffff;
+        color: #000000;
+        font-weight: 250px;
+        border: none;
+        width: 250px;
+        padding: 12px 20px;
+        cursor: pointer;
+        border-radius: 10px;
+        font-size: 16px;
+        border: 2px solid transparent;
+        transition: 0.3s ease;
+    }
+
+
+    .login-form input[type="Login"]:hover {
+        background-color: #ff0707;
+    }
+
+    .login-form input[type="text"],
+    .login-form input[type="password"] {
+        background-color: #ecf0f1;
+        color: #333;
+    }
+
+    .login-form input[type="text"]:focus,
+    .login-form input[type="password"]:focus {
+        background-color: #d5dbdb;
+    }
+
+
+    /* COMMON CSS */
+
+    .signup-link a,
+    .login-link a {
+        color: #9294ee;
+        text-decoration: none;
+        font-weight: bold;
+        transition: color 0.3s ease;
+    }
+
+    .signup-link a:hover,
+    .login-link a:hover {
+        color: #2980b9;
+    }
+
+    .signup-link p,
+    .login-link p {
+        color: #ffffff;
+        margin-top: 12px;
+        font-size: 16px;
+    }
+
+
+    /* SIGNUP PAGE CSS */
+
+    .signup-form input[type="submit"] {
+        background-color: #db901e;
+        color: #fff;
+        cursor: pointer;
+        border: #000000;
+        transition: background-color 0.3s ease;
+    }
+
+    .signup-form input[type="submit"]:hover {
+        background-color: #afc02b;
+    }
+
+    .signup-form input[type="text"],
+    .signup-form input[type="password"] {
+        background-color: #cbd1d3;
+        color: #333;
+    }
+
+    .signup-form input[type="text"]:focus,
+    .signup-form input[type="password"]:focus {
+        background-color: #9eb1b1;
+        
+    }
+
+    /* Responsive Styles */
+    @media (max-width: 768px) {
+        .form-container {
+            padding: 20px;
+            width: 90%;
+        }
+
+        .logo {
+            width: 40px;
+        }
+
+        h2 {
+            font-size: 24px;
+        }
+
+        input, button {
+            width: 100%;
+            font-size: 14px;
+        }
+
+        .login-form {
+            padding: 0 20px;
+        }
+    }
+
+    @media (max-width: 320px) {
+        /* Adjust the form container to fit the small screen */
+        .form-container {
+            padding: 10px;
+            width: 90%; /* Ensure it takes almost full width */
+            height: auto; /* Allow height to adjust to content */
+        }
+
+        /* Decrease the heading font size */
+        h2 {
+            font-size: 18px; /* Smaller font size for headings */
+            margin-bottom: 10px;
+        }
+
+        /* Style input fields and buttons for small screens */
+        .login-form input, .signup-form input {
+            width: 100%; /* Full width for input fields */
+            padding: 8px; /* Reduced padding for better fit */
+            font-size: 14px; /* Adjust font size */
+            margin: 8px 0; /* Adequate margin between fields */
+            box-sizing: border-box;
+        }
+
+        /* Style buttons for small screens */
+        button[type="Login"],
+        button[type="fb1"],
+        button[type="g"],
+        button[type="a"] {
+            width: 100%; /* Full width for buttons */
+            padding: 10px; /* Adjust padding */
+            font-size: 14px; /* Smaller font size */
+            border-radius: 8px; /* Slightly rounded corners */
+        }
+
+        /* Button hover styles */
+        button[type="Login"]:hover,
+        button[type="fb1"]:hover,
+        button[type="g"]:hover,
+        button[type="a"]:hover {
+            transform: scale(1.05); /* Slightly enlarge buttons on hover */
+        }
+
+        /* Adjust login input fields' appearance */
+        .login-form input[type="text"],
+        .login-form input[type="password"] {
+            background-color: #ecf0f1;
+            color: #333;
+        }
+
+        /* Focus styles for input fields */
+        .login-form input[type="text"]:focus,
+        .login-form input[type="password"]:focus {
+            background-color: #d5dbdb;
+        }
+
+        /* Adjust logo size for small screens */
+        .logo {
+            width: 30px; /* Smaller logo for mobile screens */
+        }
+
+        /* Modify the paragraph text size */
+        .form-container p {
+            font-size: 14px;
+        }
+
+        /* Adjust the link text size */
+        .signup-link a,
+        .login-link a {
+            font-size: 14px; /* Smaller link text */
+        }
+
+        .signup-link p,
+        .login-link p {
+            font-size: 14px; /* Smaller paragraph text */
+        }
+
+        /* Reduce padding and font size for sign-in button */
+        .signin-btn {
+            font-size: 14px; /* Smaller button text */
+            padding: 8px 15px; /* Adjust padding */
+        }
+
+        .signin-btn:hover {
+            padding: 8px 25px; /* Adjust padding on hover */
+            font-size: 14px; /* Consistent size for hover */
+        }
+    }
+
+    /* For 425px screens */
+    @media (max-width: 425px) {
+        .form-container {
+            padding: 15px;
+            width: 90%; /* Slightly reduce width for better fit on small screens */
+            height: auto;
+            margin: 0 auto; /* Center the form container */
+        }
+
+        h2 {
+            font-size: 22px; /* Larger font size for headings */
+            margin-bottom: 15px;
+        }
+
+        /* Responsive input fields */
+        .login-form input, .signup-form input {
+            width: 100%; /* Inputs take full width */
+            padding: 12px; /* Consistent padding */
+            font-size: 14px; /* Adjusted font size for small screens */
+            margin: 8px 0; /* Ensure there's space between inputs */
+            box-sizing: border-box;
+            border-radius: 6px; /* Slightly rounded corners for modern look */
+            border: 1px solid #ccc; /* Add a border for better input visibility */
+        }
+
+        /* Increase font size on focus for better interaction */
+        .login-form input:focus, .signup-form input:focus {
+            font-size: 15px;
+            border-color: #f39c12; /* Highlight border color on focus */
+            background-color: #ecf0f1; /* Lighter background on focus */
+        }
+
+        /* Responsive buttons */
+        button[type="Login"],
+        button[type="fb1"],
+        button[type="g"],
+        button[type="a"] {
+            width: 100%; /* Full width for buttons */
+            padding: 14px;
+            font-size: 15px; /* Font size for readability */
+            border-radius: 8px;
+            margin: 10px 0; /* Add space between buttons */
+            cursor: pointer; /* Pointer cursor to indicate clickable buttons */
+            border: 1px solid transparent; /* Add border to buttons */
+            transition: 0.3s ease;
+        }
+
+        /* Button hover effects */
+        button[type="Login"]:hover,
+        button[type="fb1"]:hover,
+        button[type="g"]:hover,
+        button[type="a"]:hover {
+            transform: scale(1.05);
+            background-color: #f39c12; /* Slightly change color on hover */
+        }
+
+        /* Logo size adjustments */
+        .logo {
+            width: 40px; /* Slightly larger logo */
+        }
+
+        /* Form text adjustments */
+        .form-container p {
+            font-size: 16px; /* Increase font size for readability */
+        }
+
+        /* Links styling */
+        .signup-link a,
+        .login-link a {
+            font-size: 16px; /* Increased font size for better visibility */
+        }
+
+        .signup-link p,
+        .login-link p {
+            font-size: 16px;
+        }
+
+        /* Signin button styling */
+        .signin-btn {
+            font-size: 16px;
+            padding: 12px 20px;
+        }
+
+        .signin-btn:hover {
+            padding: 12px 32px;
+            font-size: 16px;
+            background-color: #e67e22; /* Adjust hover color */
+        }
+    }
+    /* For 375px screens */
+    @media (max-width: 375px) {
+        .form-container {
+            padding: 15px;
+            width: 90%;
+            height: auto;
+            margin-top: 10%;
+        }
+
+        h2 {
+            font-size: 20px; /* Slightly larger font size for 375px */
+            margin-bottom: 15px;
+        }
+
+        .login-form input, .signup-form input {
+            width: 100%;
+            padding: 10px;
+            font-size: 14px; /* Consistent font size */
+            margin: 8px 0;
+            box-sizing: border-box;
+        }
+
+        button[type="Login"],
+        button[type="fb1"],
+        button[type="g"],
+        button[type="a"] {
+            width: 100%;
+            padding: 12px;
+            font-size: 14px;
+            border-radius: 8px;
+        }
+
+        button[type="Login"]:hover,
+        button[type="fb1"]:hover,
+        button[type="g"]:hover,
+        button[type="a"]:hover {
+            transform: scale(1.05);
+        }
+
+        .logo {
+            width: 35px; /* Slightly larger logo for 375px screens */
+        }
+
+        .form-container p {
+            font-size: 15px; /* Increased font size for readability */
+        }
+
+        .signup-link a,
+        .login-link a {
+            font-size: 15px;
+        }
+
+        .signup-link p,
+        .login-link p {
+            font-size: 15px;
+        }
+
+        .signin-btn {
+            font-size: 15px;
+            padding: 10px 18px;
+        }
+
+        .signin-btn:hover {
+            padding: 10px 28px;
+            font-size: 15px;
+        }
+    }
+
+
+    /* For 320px screens (already provided above) */
+    @media (max-width: 320px) {
+        .form-container {
+            padding: 10px;
+            width: 90%;
+            height: auto;
+        }
+
+        h2 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .login-form input, .signup-form input {
+            width: 100%;
+            padding: 8px;
+            font-size: 14px;
+            margin: 8px 0;
+            box-sizing: border-box;
+        }
+
+        button[type="Login"],
+        button[type="fb1"],
+        button[type="g"],
+        button[type="a"] {
+            width: 100%;
+            padding: 10px;
+            font-size: 14px;
+            border-radius: 8px;
+            gap: 10px;
+        }
+
+        button[type="Login"]:hover,
+        button[type="fb1"]:hover,
+        button[type="g"]:hover,
+        button[type="a"]:hover {
+            transform: scale(1.05);
+        }
+
+        .logo {
+            width: 30px;
+        }
+
+        .form-container p {
+            font-size: 14px;
+        }
+
+        .signup-link a,
+        .login-link a {
+            font-size: 14px;
+        }
+
+        .signup-link p,
+        .login-link p {
+            font-size: 14px;
+        }
+
+        .signin-btn {
+            font-size: 14px;
+            padding: 8px 15px;
+        }
+
+        .signin-btn:hover {
+            padding: 8px 25px;
+            font-size: 14px;
+        }
+    }
+

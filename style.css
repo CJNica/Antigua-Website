@@ -1,0 +1,1029 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box; /* Fixes width calculation issues */
+}
+
+/* Background */
+.banner {
+  width: 100%;
+  height: 100%;
+  background-image: url('images/antigua_background_home (2).jpg'); /* Updated image path */
+  background-size: cover;
+  background-position: center;
+  overflow-x: hidden; /* Prevent horizontal scroll caused by overflow */
+}
+
+
+
+/* Image Container */
+.image-container {
+    display: flex;
+    margin-top: 130px;
+    left: 500px;
+    
+}
+.image-container2 {
+    position: relative;
+    top: -50px;   /* Move down */
+    left: 620px;  /* Move right */
+}
+.circle-img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+/* Individual Circle Images */
+.pancit_chami {
+    position: relative;
+    left: 650px;
+    z-index: 3;
+}
+.fried_chicken {
+    position: relative;
+    right: 60px;
+    z-index: 2;
+}
+.siopao {
+    position: relative;
+    left: -50px;
+    z-index: 1;
+    
+}
+/* Hover Effect for Circle Images */
+.circle-img:hover {
+    transform: scale(1.1);
+}
+/* Hero Text */
+.hero-text {
+    text-align: center;
+    color: white;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 10px;
+    right: -18px;
+    position: relative;
+    top: -50px;
+}
+.hero-text h1 {
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+    font-size: 48px;
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+.hero-text p {
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+    font-size: 25px;
+    font-weight: 300;
+    line-height: 1.5;
+    margin-bottom: 30px;
+}
+
+/* Buttons */
+.hero-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    position: relative;
+    margin-top: 20px;
+}
+.btn {
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 20px;
+    border-radius: 5px;
+    transition: 0.3s ease-in-out;
+}
+
+.btn.primary {
+    background-color:transparent;
+    color: white;
+    border: 2px solid #d35400;
+}
+.btn.primary:hover {
+    background-color: #d35400;
+}
+.btn.secondary {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+}
+.btn.secondary:hover {
+    background-color: white;
+    color: rgb(0, 0, 0);
+}
+html{
+    background-color: black;
+}
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 32px;
+  left: 0;
+  right: 0;
+  background-color: #333;
+  padding: 10px 20px;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  width: 200px;
+  cursor: pointer;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+}
+
+.navbar ul li {
+  margin-right: 20px;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  padding: 8px 12px;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+  color: #FFD700; /* Gold color on hover */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1024px) {
+  .navbar ul {
+    display: none;
+  }
+
+  .burger-icon {
+    display: block;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+  }
+}
+
+@media (min-width: 1024px) {
+  .burger-icon {
+    display: none;
+  }
+
+  .navbar ul {
+    display: flex;
+  }
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background-color: #333;
+  color: white;
+  transition: 0.3s;
+  padding-top: 60px;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: white;
+  padding: 10px 15px;
+  display: block;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  background-color: #575757;
+}
+
+.sidebar.active {
+  left: 0;
+}
+
+/* Sign In Button Styling */
+.signin-btn {
+  background-color: rgb(161, 99, 33);
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  display: inline-block;
+}
+
+.signin-btn:hover {
+  background-color: #b96319;
+  transform: scale(1.05);
+}
+/* General reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+body {
+  font-family: Verdana, sans-serif;
+  background-image: url(images/background.jpg);
+}
+
+/* Navbar */
+.navbar {
+  position: fixed;
+  top: 32px;
+  left: 0;
+  right: 0;
+  background-color: #333;
+  padding: 10px 20px;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  width: 200px;
+  cursor: pointer;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+}
+
+.navbar ul li {
+  margin-right: 20px;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  padding: 8px 12px;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+  color: #FFD700; /* Gold color on hover */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1024px) {
+  .navbar ul {
+    display: none;
+  }
+
+  .burger-icon {
+    display: block;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+  }
+}
+
+@media (min-width: 1024px) {
+  .burger-icon {
+    display: none;
+  }
+
+  .navbar ul {
+    display: flex;
+  }
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background-color: #333;
+  color: white;
+  transition: 0.3s;
+  padding-top: 60px;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: white;
+  padding: 10px 15px;
+  display: block;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  background-color: #575757;
+}
+
+.sidebar.active {
+  left: 0;
+}
+
+/* Sign In Button Styling */
+.signin-btn {
+  background-color: rgb(161, 99, 33);
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.signin-btn:hover {
+  background-color: #b96319;
+  transform: scale(1.05);
+}
+
+/* General Styling */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  box-sizing: border-box; /* Fixes width calculation issues */
+}
+
+/* Navbar */
+.navbar {
+  width: 85%;
+  margin: auto;
+  padding: 35px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo {
+  width: 200px;
+  cursor: pointer;
+}
+
+.navbar ul li {
+  list-style: none;
+  display: inline-block;
+  margin: 0 20px;
+  position: relative;
+  left: 150px;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: #ffffff;
+  text-transform: capitalize;
+  font-family: 'Antiqua';
+  font-size: 25px;
+}
+
+/* Navbar Effects */
+.navbar ul li::after {
+  content: '';
+  height: 2px;
+  width: 0%;
+  background: #ffffff;
+  position: absolute;
+  left: 0;
+  bottom: -20px;
+  transition: 0.5s;
+}
+
+.navbar ul li:hover:after {
+  width: 100%;
+}
+
+.burger-icon {
+  display: none;
+  font-size: 30px;
+  color: white;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .navbar ul {
+    display: none; /* Hide the menu items initially */
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    background-color: #333;
+  }
+
+  .navbar .burger-icon {
+    display: block; /* Show burger icon */
+  }
+
+  .navbar ul.active {
+    display: flex; /* Show menu when active */
+  }
+}
+
+/* Navbar styling */
+.navbar {
+  position: fixed; /* Fixed at the top */
+  top: 32px;
+  left: 0;
+  right: 0;
+  background-color: #333; /* Dark background */
+  padding: 10px 20px;
+  width: 100%;
+  z-index: 1000; /* Ensure navbar stays on top of other elements */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional shadow for navbar */
+}
+
+/* Logo styling */
+.navbar .logo {
+  max-width: 150px;
+  height: auto;
+}
+
+/* Navbar links styling */
+.navbar ul {
+  list-style: none;
+  display: flex;
+}
+
+.navbar ul li {
+  margin-right: 20px;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  padding: 8px 12px;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+  color: #FFD700; /* Gold color on hover */
+}
+
+/* Content Styling (hero-text and images) */
+.hero-text {
+  padding-top: 80px; /* To make room for the fixed navbar */
+}
+
+.hero-buttons {
+  margin-top: 20px;
+}
+
+.hero-buttons .btn {
+  padding: 12px 25px;
+  margin: 10px;
+  border-radius: 25px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+  .navbar ul {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .navbar ul li {
+    margin-bottom: 10px;
+  }
+
+  .hero-text h1 {
+    font-size: 24px;
+  }
+
+  .hero-buttons .btn {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+}
+
+/* Banner and Navbar */
+.navbar {
+  position: fixed;
+  top: 32px;
+  left: 0;
+  right: 0;
+  background-color: #333;
+  padding: 10px 20px;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  width: 200px;
+  cursor: pointer;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+}
+
+.navbar ul li {
+  margin-right: 20px;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  padding: 8px 12px;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+
+.navbar ul li a:hover {
+  color: #FFD700; /* Gold color on hover */
+}
+
+/* Media Queries for Responsiveness */
+
+/* For screens less than or equal to 1024px */
+@media (max-width: 1024px) {
+  .navbar ul {
+    display: none; /* Hide the navbar links */
+  }
+
+  /* Show the burger icon for screens smaller than 1024px */
+  .burger-icon {
+    display: block;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+  }
+}
+
+/* For screens 1024px and larger: Hide the burger icon and ensure the navbar links are displayed */
+@media (min-width: 1024px) {
+  .burger-icon {
+    display: none; /* Remove burger icon on larger screens */
+  }
+
+  .navbar ul {
+    display: flex; /* Ensure navbar links are visible on larger screens */
+  }
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background-color: #333;
+  color: white;
+  transition: 0.3s;
+  padding-top: 60px;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: white;
+  padding: 10px 15px;
+  display: block;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  background-color: #575757;
+}
+
+.sidebar.active {
+  left: 0;
+}
+
+/* Sign In Button Styling */
+.signin-btn {
+  background-color: rgb(161, 99, 33);
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  display: inline-block;
+}
+
+.signin-btn:hover {
+  background-color: #b96319;
+  transform: scale(1.05);
+}
+
+/* Default image containers should be visible for screens wider than 768px */
+.image-container, .image-container2 {
+  display: block;
+}
+
+/* Slideshow Section - Hidden by default (above 768px) */
+.slideshow-container {
+  display: none;  /* Default: hide the slideshow */
+  position: relative;
+  width: 80%;
+  max-width: 768px;
+  margin-top: 10rem;
+  left: 10%;
+  overflow: hidden; /* Hide overflow outside the box */
+  border: 2px solid #ddd; /* Add a border around the box container */
+  border-radius: 8px; /* Optional: rounded corners for the box */
+}
+
+/* Style the box container for the images */
+.slideshow-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 300px; /* Fixed height for consistency */
+  overflow: hidden;
+}
+
+/* Style the slides inside the box container */
+.slide {
+  display: none;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;  /* Ensures images maintain aspect ratio */
+  transition: opacity 1s ease-in-out;
+}
+
+.active {
+  display: block;
+}
+
+/* Show slideshow on screens <= 768px */
+@media only screen and (max-width: 768px) {
+  .slideshow-container {
+    display: block;  /* Show slideshow on smaller screens */
+  }
+
+  .image-container, .image-container2 {
+    display: none; /* Hide static images on small screens */
+  }
+}
+
+/* Hide slideshow on screens wider than 768px */
+@media only screen and (min-width: 800px) {
+  .slideshow-container {
+    display: none; /* Hide slideshow on larger screens */
+  }
+
+  .image-container, .image-container2 {
+    display: block; /* Show static images on larger screens */
+  }
+}
+/* General reset */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  box-sizing: border-box; /* Fixes width calculation issues */
+}
+
+/* Background */
+.banner {
+  width: 100%;
+  height: 100%;
+  background-image: url('images/antigua_background_home (2).jpg'); /* Updated image path */
+  background-size: cover;
+  background-position: center;
+  overflow-x: hidden; /* Prevent horizontal scroll caused by overflow */
+}
+
+/* Hero Text */
+.hero-text {
+  text-align: center;
+  color: white;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 10px;
+  position: relative;
+  top: -50px;
+}
+
+/* Hero Text Styling */
+.hero-text h1 {
+  font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+  font-size: 48px;
+  font-weight: bold;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.hero-text p {
+  font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+  font-size: 25px;
+  font-weight: 300;
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+
+/* Hero Buttons Styling */
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  position: relative;
+  margin-top: 20px;
+}
+
+.btn {
+  padding: 10px 20px;
+  text-decoration: none;
+  font-size: 20px;
+  border-radius: 5px;
+  transition: 0.3s ease-in-out;
+}
+
+.btn.primary {
+  background-color: transparent;
+  color: white;
+  border: 2px solid #d35400;
+}
+
+.btn.primary:hover {
+  background-color: #d35400;
+}
+
+.btn.secondary {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.btn.secondary:hover {
+  background-color: white;
+  color: rgb(0, 0, 0);
+}
+
+/* Navbar Styling */
+.navbar {
+  position: fixed;
+  top: 32px;
+  left: 0;
+  right: 0;
+  background-color: #333;
+  padding: 10px 20px;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  width: 200px;
+  cursor: pointer;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .hero-text {
+    padding-top: 80px; /* Adjust space for fixed navbar */
+    max-width: 90%; /* Make the hero text smaller for smaller screens */
+  }
+
+  .hero-text h1 {
+    font-size: 30px; /* Smaller font for smaller screens */
+  }
+
+  .hero-text p {
+    font-size: 20px; /* Smaller font for smaller screens */
+  }
+
+  .hero-buttons {
+    flex-direction: center;
+    gap: 10px;
+    margin-top: 20px;
+  }
+
+  .hero-buttons .btn {
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 320px) {
+  .hero-text {
+    padding-top: 80px; /* Adjust space for fixed navbar */
+    max-width: 90%;
+    left: 1%;
+  }
+
+  .hero-text h1 {
+    font-size: 24px;
+    text-align: center; /* Even smaller font for tiny screens */
+  }
+
+  .hero-text p {
+    font-size: 18px; /* Even smaller font for tiny screens */
+  }
+
+  .hero-buttons {
+    flex-direction: center;
+    gap: 10px;
+    margin-top: 20px;
+  }
+
+  .hero-buttons .btn {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}
+
+/* For large screens */
+@media (min-width: 1024px) {
+  .navbar ul {
+    display: flex;
+  }
+}
+
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #000;
+  color: #fff;
+}
+
+.header {
+  background-color: #000;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  width: 100%;
+  flex-wrap: wrap;
+  margin-top: -10px;
+}
+
+.header-item {
+  display: flex;
+  align-items: center;
+  margin: 5px 15px;
+}
+
+.header-item i {
+  margin-right: 8px;
+  font-size: 16px;
+}
+
+.header-item span {
+  font-size: 14px;
+}
+/* Mobile View: Text and Icons Smaller */
+@media (max-width: 400px) {
+  .hero-text {
+    padding-top: 80px; /* Adjust space for fixed navbar */
+    max-width: 90%;
+    left: 1%;
+  }
+  .header {
+      padding: 8px 15px; /* Reduce header padding */
+  }
+
+  .header-item {
+      margin: 5px 10px; /* Reduce spacing between items */
+  }
+
+  .header-item i {
+      font-size: 0px; /* Smaller icon size */
+  }
+
+  .header-item span {
+      font-size: 8px; /* Smaller text size */
+  }
+}
+@media (max-width: 525px) {
+  .hero-text {
+    padding-top: 80px; /* Adjust space for fixed navbar */
+    max-width: 90%;
+    left: 1%;
+  }
+  .header {
+      padding: 8px 15px; /* Reduce header padding */
+  }
+
+  .header-item {
+      margin: 5px 10px; /* Reduce spacing between items */
+  }
+
+  .header-item i {
+      font-size: 0px; /* Smaller icon size */
+  }
+
+  .header-item span {
+      font-size: 8px; /* Smaller text size */
+  }
+}
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #000;
+  color: #fff;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+.header {
+  background-color: #000;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.header-item {
+  display: flex;
+  align-items: center;
+  margin: 5px 15px;
+}
+
+.header-item i {
+  margin-right: 8px;
+  font-size: 16px;
+}
+
+.header-item span {
+  font-size: 14px;
+}
+
+/* Fix container width for the main section */
+main {
+  max-width: 1200px; /* Limit the width */
+  margin: 0 auto; /* Center align the content */
+}
+
+/* Adjust image or background behavior */
+img, .background-image {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Mobile view fixes (if needed) */
+@media (max-width: 400px) {
+  .header {
+      padding: 8px 15px; /* Compact header */
+  }
+  .header-item span {
+      font-size: 8px; /* Smaller text */
+  }
+}
+/* Mobile view fixes (if needed) */
+@media (max-width: 430px) {
+  .header {
+      padding: 8px 15px; /* Compact header */
+  }
+  .header-item span {
+      font-size: 8px; /* Smaller text */
+  }
+}

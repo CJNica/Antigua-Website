@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Antigua - Products</title>
+  <link rel="stylesheet" href="Style_productdrinks.css">
+  <link rel="stylesheet" href="allstyle.css">
+  <link rel="stylesheet" href="style_p.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <header class="header">
+      <div class="header-content">
+          <div class="header-item">
+              <i class="location-icon">📍</i>
+              <span>Profugo St. Lucena City</span>
+          </div>
+          <div class="header-item">
+              <i class="clock-icon">⏰</i>
+              <span>Daily: 9:00 am - 10:00 pm</span>
+          </div>
+          <div class="header-item">
+              <i class="phone-icon">📞</i>
+              <span>(042) 710 3531</span>
+          </div>
+          <div class="header-item">
+              <i class="email-icon">✉️</i>
+              <span>antiguarestaurantlucena@gmail.com</span>
+          </div>
+      </div>
+  </header>
+</body>
+
+<body>
+
+  <!-- Banner Section -->
+  <div class="banner">
+    <div class="navbar">
+      <div class="burger-icon" onclick="toggleMenu()">
+        &#9776; <!-- Burger menu icon -->
+      </div>
+      <img src="images/antigua_logo.png" class="logo">
+      
+      <!-- Sidebar -->
+      <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeMenu()">×</a>
+        <a href="Pelec.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="blogs.html">Blogs</a>
+        <a href="products.html">Products</a>
+        <a href="contact.html">Contact</a>
+      </div>
+
+      <ul>
+        <li><a href="Pelec.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="blogs.html">Blogs</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="contact.html">Contact</a></li>
+       
+      </ul>
+      <a href="login.html" class="signin-btn">Sign In</a>
+    </div>
+  </div>
+
+  <!-- Slideshow and other content here -->
+
+  <script>
+    // JavaScript to toggle the sidebar menu
+    function toggleMenu() {
+      var sidebar = document.getElementById("mySidebar");
+      sidebar.classList.toggle("active");
+    }
+
+    // Close the sidebar when clicking outside
+    function closeMenu() {
+      var sidebar = document.getElementById("mySidebar");
+      sidebar.classList.remove("active");
+    }
+  </script>
+
+</body>
+
+
+</div>
+<section class="products" style=" margin-top: 5rem;">
+  <div>
+    <img style="width: 250px;align-items: center;" src="images/CAFE ANTIGUA.png" class="logo2">
+    <form class="search-form" action="#" method="get">
+      <input class="search-input" type="text" placeholder="Search for food..."  name="search">
+  </form>
+    <nav class="navbarprod">
+      <ul>
+        <li><a href="products.html">Specialties</a></li>
+        <li><a href="chicken.html">Chicken</a></li>
+        <li><a href="Product-Pork.html">Pork</a></li>
+        <li><a href="Product-Beef.html">Beef</a></li>
+        <li><a href="Product-Seafood.html">Seafoods</a></li>
+        <li><a href="Product-Vegetables.html">Vegetables</a></li>
+        <li><a href="Product-Softdrinks.html">Drinks</a></li>
+        <li><a href="Product-Desert.html">Desert</a></li>
+
+      </ul>
+    </nav>
+  </div>
+  <div class="dropdown">
+    <button onclick="myFunction()" class="dropbtn">Drinks</button>
+    <div id="myDropdown" class="dropdown-content">
+      <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
+      <a href="products.html">Specialties</a>
+      <a href="Product-Pork.html">Pork</a>
+      <a href="chicken.html">Chicken</a>
+      <a href="Product-Seafood.html">Seafoods</a>
+      <a href="Product-Vegetables.html">Vegetables</a>
+      <a href="Product-Beef.html">Beef</a>
+      <a href="Product-Desert.html">Desserts</a>
+    </div>
+  </div>
+  <script>
+    function myFunction() {
+      document.getElementById("myDropdown").classList.toggle("show");
+    }
+
+    function filterFunction() {
+      const input = document.getElementById("myInput");
+      const filter = input.value.toUpperCase();
+      const div = document.getElementById("myDropdown");
+      const a = div.getElementsByTagName("a");
+      for (let i = 0; i < a.length; i++) {
+        const txtValue = a[i].textContent || a[i].innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+          a[i].style.display = "";
+        } else {
+          a[i].style.display = "none";
+        }
+      }
+    }
+  </script>
+</div>
+    
+        
+    <div id="Drinks" class="products-container">
+      
+      <h2 class="ourmenu">Our Menu</h2>
+
+
+      <!-- Ice Tea Product -->
+      <div class="product-tea">
+        <img src="images/Ice Tea.jpg" alt="Ice Tea">
+        <div class="product-info-tea">
+          <h2>ICE TEA</h2>
+          <p>Chilled tea served sweetened or unsweetened</p>
+          <p class="price-tea">40</p>
+        </div>
+      </div>
+
+      <!-- Mango juice Product -->
+      <div class="product-mangojuice">
+        <img src="images/Mango Juice.jpg" alt="Mango Juice">
+        <div class="product-info-mangojuice">
+          <h2>MANGO JUICE</h2>
+          <p>Refreshing juice made from ripe mangoes</p>
+          <p class="price-mangojuice">60</p>
+          
+        </div>
+      </div>
+
+      <!-- Pineapple Juice Product -->
+      <div class="product-pineapple">
+        <img src="images/Pineapple Juice.jpg" alt="Pineapple Juice">
+        <div class="product-info-pineapple">
+          <h2>PINEAPPLE JUICE</h2>
+          <p>Sweet and tangy juice from fresh pineapples</p>
+          <p class="price-pineapple">60</p>
+          
+        </div>
+      </div>
+
+      <!--Bottled Water Product-->
+      <div class="product-water">
+        <img src="images/Bottled Water.jpg" alt="Bottled Water">
+        <div class="product-info-water">
+          <h2>BOTTLED WATER</h2>
+          <p>Purified water sealed in a bottle for convenience</p>
+          <p class="price-water">20 - 25</p>
+  
+        </div>
+      </div>
+
+      <!-- Drink in Can Product -->
+      <div class="product-drinkcan">
+        <img src="images/Softdrink in can.jpg" alt="Softdrink in Can">
+        <div class="product-info-drinkcan">
+          <h2>SOFTDRINK IN CAN</h2>
+          <p>Carbonated beverages packaged in aluminum cans</p>
+          <p class="price-drinkcan">60</p>
+        
+        </div>
+      </div>
+
+      <!--Drink in Bottle Product-->
+      <div class="product-drinkbottle">
+        <img src="images/Softdrink in Bottle.jpg" alt="Softdrink in Bottle">
+        <div class="product-info-drinkbottle">
+          <h2>SOFTDRINK IN BOTTLE</h2>
+          <p>Carbonated beverages packaged in plastic or glass bottles</p>
+          <p class="price-drinkbottle">28</p>
+          
+        </div>
+      </div>
+
+      <!--Mango Shake Product-->
+      <div class="product-mangoshake">
+        <img src="images/Mango Shake.jpg" alt="Mango Shake">
+        <div class="product-info-mangoshake">
+          <h2>MANGO SHAKE</h2>
+          <p> Creamy blended drink made with mango and milk</p>
+          <p class="price-mangoshake">100</p>
+          
+        </div>
+      </div>
+
+      <!-- Lychee Shake Product -->
+      <div class="product-lychee">
+        <img src="images/Lyche Shake.jpg" alt="Lychee Shake">
+        <div class="product-info-lychee">
+          <h2>LYCHEE SHAKE</h2>
+          <p>Smooth drink made with lychee and milk</p>
+          <p class="price-lychee">100</p>
+    
+        </div>
+      </div>
+
+      <!--Melon Shake Product-->
+      <div class="product-melon">
+        <img src="images/Melon Shake.jpg" alt="Melon Shake">
+        <div class="product-info-melon">
+          <h2>MELON SHAKE</h2>
+          <p>Refreshing shake made from blended melon and milk</p>
+          <p class="price-melon">100</p>
+  
+        </div>
+      </div>
+      
+  </section>
+
+</body>
+
+
+</html>
