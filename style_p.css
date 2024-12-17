@@ -912,7 +912,7 @@ body {
   }
   .dropdown {
     display: none;
-    top: 10000px;
+    top: -500px;
   }
 }
 
