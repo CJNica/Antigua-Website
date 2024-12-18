@@ -913,7 +913,37 @@ body {
   .dropdown {
     display: none;
     top: -500px;
+    
   }
+}
+@media (min-width: 426px) {
+  .navbarprod{
+    display: flex;
+  }
+
+  .logo2{
+    size: 100px;
+  }
+  .dropdown {
+    display: none;
+    top: -800px;
+    
+  }
+}
+@media (min-width: 540px) {
+  .navbarprod{
+    display: flex;
+  }
+
+  .logo2{
+    size: 80px;
+  }
+  .dropdown {
+    display: none;
+    top: -800px;
+  
+  }
+  
 }
 
 .dropbtn {
